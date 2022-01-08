@@ -1,8 +1,10 @@
 'use strict';
 let path = require('path');
-const binary = require('node-pre-gyp');
-const binding_path = binary.find(path.resolve(path.join(__dirname, 'package.json')));
-const nodelua = require(binding_path);
+//const binary = require('node-pre-gyp');
+//const binding_path = binary.find(path.resolve(path.join(__dirname, 'package.json')));
+//console.log(binding_path);
+//const nodelua = require(binding_path);
+const nodelua = require('./build/Release/node-luajit');
 
 let MyCLua = nodelua['MyLuaState'];
 
